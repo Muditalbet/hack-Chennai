@@ -27,11 +27,21 @@ router.post('/management', async(req,res)=>{
         }).catch(err=>console.log(err))
     }).catch(err=>console.log(err))
 })
-router.get('/allManagement', (req,res)=>{
-    Management.find()
-    .then(List=>{
-        res.send(List)
+router.get('/showManagement', (req,res)=>{
+    var disasterName
+    Disaster.findOne({_id:req.query.id})
+    .then(disname=>{
+        disasterName = disname.name
+    }).catch(err=>console.log(err))
+    
+
+    Management.findOne({disasterID:req.query.id})
+    .then(content=>{
+        if(!content) res.send('bad query')
+        else{
+            // console.log(disasterName)
+            res.send(disasterName + " " + content.content)
+        }
     }).catch(err=>console.log(err))
 })
-
 module.exports = router

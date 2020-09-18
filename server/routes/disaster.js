@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const Disaster = mongoose.model("Disaster")
+const Management = mongoose.model("Management")
 
 router.post('/disasters', async(req,res)=>{
     const {name} = req.body

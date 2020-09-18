@@ -24,6 +24,7 @@ mongoose.connection.on('error', (err)=>{
 
 app.use(express.json())
 app.use(require('./routes/disaster'))
+app.use(require('./routes/management'))
 
 app.get('/', (req, res) => res.send('Hello World!'))
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
