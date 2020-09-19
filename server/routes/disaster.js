@@ -30,5 +30,14 @@ router.get('/allDisaster', (req,res)=>{
     }).catch(err=>console.log(err))
     // console.log(Disasters);
 })
+router.get('/specificDisaster', (req,res)=>{
+    Disaster.findOne({_id:req.query.id})
+    .then(List=>{
+        if(!List) res.send('bad query')
+        else{
+            res.json(List)
+        }
+    }).catch(err=>console.log(err))
+})
 
 module.exports = router

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 
 
@@ -13,14 +14,17 @@ function Disasters() {
         fetchData();
     }, []);
     console.log(disaster);
+    var test
     return (
         <div>
-            {disaster.map(({name, about})=>(
-                <div>
-              <h1>{name}</h1>
-            <div>{about}</div>
-            <br />
-                </div>
+            {disaster.map(({name, about, _id})=>(
+                <Link to={`/management/${_id}`}>
+                    <div>
+                        <h1>{name}</h1>
+                        <div>{about}</div>
+                        <br />
+                    </div>
+                </Link>
             ))}
             da
         </div>
