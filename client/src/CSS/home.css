@@ -6,27 +6,43 @@
 }
 .headingArea{
     width: 100%;
-    height: 300px;
     margin: auto;
     background-color: #8d93ab;
-    vertical-align: auto; 
     color: #f1f3f8;
     text-align: center;
+}
+.homeHeadingText{
+    padding: 100px 0;
+    padding-bottom: 30px;
 }
 .homeHeadingText h1{
     padding: 0;
     margin: auto;
+    margin-bottom: 3px;
     font-weight: 500;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .homeHeadingText p{
     padding: 0;
     margin: auto;
-    font-size: 30;
+    font-size: 25px;
+}
+.homeHeadingButtons{
+    padding: 50px 0;
+    padding-bottom: 60px;
+}
+.homeHeadingButtons a{
+    padding:6px 18px;
+    border-radius: 10px;
+    background-color: #393b44;
+    text-decoration: none;
+    font-size: 30px;
+    color: #d6e0f0;
+    transition: 0.2s;
+}
+.homeHeadingButtons a:hover{
+    background-color: #d6e0f0;
+    color: #393b44;
 }
 
-.homeHeadingButtons a{
-    text-decoration: none;
-    color: #d6e0f0;
-}

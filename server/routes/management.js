@@ -18,6 +18,7 @@ router.post('/management', async(req,res)=>{
 
             const newManagement = new Management({
                 disasterID:existingDisaster._id,
+                disasterName:existingDisaster.name,
                 content
             })
             newManagement.save()
@@ -28,20 +29,11 @@ router.post('/management', async(req,res)=>{
     }).catch(err=>console.log(err))
 })
 router.get('/showManagement', (req,res)=>{
-    var disasterName
-    Disaster.findOne({_id:req.query.id})
-    .then(disname=>{
-        disasterName = disname.name
-    }).catch(err=>console.log(err))
-    
-
-    Management.findOne({disasterID:req.query.id})
-    .then(content=>{
-        if(!content) res.send('bad query')
+    Management.find({disasterID:req.query.id})
+    .then(List=>{
+        if(!List) res.send('bad query')
         else{
-            //* console.log(disasterName)
-            console.log('test')
-            res.send(disasterName + " " + content.content)
+            res.json(List)
         }
     }).catch(err=>console.log(err))
 })

@@ -5,7 +5,7 @@ const Disaster = mongoose.model("Disaster")
 const Management = mongoose.model("Management")
 
 router.post('/disasters', async(req,res)=>{
-    const {name} = req.body
+    const {name, about} = req.body
     if(!name) return res.status(422).json({error:'Enter name of disaster'})
     await Disaster.findOne({
         name:{ $regex : new RegExp(name, "i") }
@@ -13,7 +13,8 @@ router.post('/disasters', async(req,res)=>{
         if(existingDisaster) return res.status(422).json({error:'disaster already exist'})
 
         const newDisaster = new Disaster({
-            name
+            name,
+            about
         })
         newDisaster.save()
         .then((newDisaster)=>{
@@ -24,7 +25,7 @@ router.post('/disasters', async(req,res)=>{
 router.get('/allDisaster', (req,res)=>{
     Disaster.find()
     .then(List=>{
-        res.send(List)
+        res.json(List)
     }).catch(err=>console.log(err))
 })
 
