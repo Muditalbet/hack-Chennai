@@ -39,7 +39,8 @@ router.get('/showManagement', (req,res)=>{
     .then(content=>{
         if(!content) res.send('bad query')
         else{
-            // console.log(disasterName)
+            //* console.log(disasterName)
+            console.log('test')
             res.send(disasterName + " " + content.content)
         }
     }).catch(err=>console.log(err))
