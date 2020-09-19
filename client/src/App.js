@@ -5,14 +5,10 @@ import ReactDom from 'react-dom'
 import Navbar from './component/Navbar'
 import Home from './component/Home'
 import Footer from './component/Footer'
+import Management from './component/Management';
 
 import Test from './component/Test'
 import './App.css';
-
-function Management(){
-  let { id } = useParams()
-  return <h2>User {id}</h2>
-}
 
 function App() {
   return (
@@ -20,7 +16,7 @@ function App() {
       <Router>
         <Navbar />
         <Route exact path='/' component={Home} />
-        <Route path='/:test' component={Test} />
+        <Route path='/management' component={Management} />
         <Footer />
       </Router>
     </>
