@@ -1,0 +1,18 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(32,35,42);
+    height: 120px;
+    color: white;
+    font-size: 3em;
+    font-weight: 400;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav>img{
+    height: 8vh;
+    object-fit: contain;
+    margin: 50px 40px 50px 0px;
+}

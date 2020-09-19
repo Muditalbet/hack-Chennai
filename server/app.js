@@ -3,7 +3,7 @@ const app = express()
 require('dotenv').config()
 const mongoose = require('mongoose')
 
-const port = 8000
+const port = 8000;
 
 require('./modal/Disaster')
 require('./modal/Management')
