@@ -17,6 +17,7 @@ export default function Home() {
                 </div>
                 <div className='homeHeadingButtons'>
                     <Link to='test' className=''>Get Started</Link>
+                    <Link to='noth'>Get Started</Link>
                 </div>
             </div>
             <h1 className='aboutHead'>ABOUT US</h1>

@@ -7,6 +7,10 @@ const managementSchema = new mongoose.Schema({
         required:'Enter Disaster _id',
         unique:'Management already exist'
     },
+    disasterName:{
+        type:String,
+        required:'Enter disaster name'
+    },
     content:{
         type:String,
         require:'Enter its management ways'

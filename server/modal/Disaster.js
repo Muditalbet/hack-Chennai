@@ -5,6 +5,10 @@ const disasterSchema = new mongoose.Schema({
         type:String,
         required:'Please enter the disaster name',
         unique:'Disaster already exist'
+    },
+    about:{
+        type:String,
+        required:'Please tell about the disaster.'
     }
 })
 
