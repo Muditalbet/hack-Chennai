@@ -4,8 +4,7 @@ const managementSchema = new mongoose.Schema({
     disasterID:{
         type: mongoose.Schema.Types.ObjectId, 
         ref:'Disaster',
-        required:'Enter Disaster _id',
-        unique:'Management already exist'
+        required:'Enter Disaster _id'
     },
     disasterName:{
         type:String,
