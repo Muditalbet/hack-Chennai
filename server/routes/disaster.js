@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
-const { default: Disasters } = require('../../client/src/component/Disasters.js')
+// const { default: Disasters } = require('../../client/src/component/Disasters.js')
 const Disaster = mongoose.model("Disaster")
 const Management = mongoose.model("Management")
 
@@ -28,7 +28,7 @@ router.get('/allDisaster', (req,res)=>{
     .then(List=>{
         res.json(List)
     }).catch(err=>console.log(err))
-    console.log(Disasters);
+    // console.log(Disasters);
 })
 
 module.exports = router

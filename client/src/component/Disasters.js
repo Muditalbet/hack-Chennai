@@ -1,7 +1,5 @@
-const React = require('react')
-const {useEffect} = require('react')
-const {useState} = require('react')
-const axios = require('axios');
+import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 
 
 function Disasters() {
@@ -9,18 +7,23 @@ function Disasters() {
 
     useEffect(()=>{
         async function fetchData(){
-            const req = await axios.get('');
+            const req = await axios.get('http://localhost:8000/allDisaster');
             setDisaster(req.data); 
         }
         fetchData();
     }, []);
     console.log(disaster);
     return (
-        <html>
         <div>
-            dasda
+            {disaster.map(({name, about})=>(
+                <div>
+              <h1>{name}</h1>
+            <div>{about}</div>
+            <br />
+                </div>
+            ))}
+            da
         </div>
-        </html>
     )
 }
 
