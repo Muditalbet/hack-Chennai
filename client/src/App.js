@@ -7,7 +7,6 @@ import Home from './component/Home'
 import Footer from './component/Footer'
 import Management from './component/Management';
 import Disasters from './component/Disasters';
-
 import Test from './component/Test'
 import './App.css';
 

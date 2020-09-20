@@ -27,8 +27,6 @@ function Disasters() {
         }
         fetchData();
     }, []);
-    console.log(disaster);
-    var test
     var i =0;
     return (
         <div className='main'>
