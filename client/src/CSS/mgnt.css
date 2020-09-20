@@ -1,5 +1,23 @@
+.management{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
 .actual_content{
     display: flex;
     align-items: center;
     margin: 40px 10vw 5px 10vw;
+}
+.actual_content>span{
+    font-size: 40px;
+    margin-right: 20px;
+    color: rgb(167, 166, 166);
+}
+.management_head{
+    text-align: center;
+    margin-top: 30px;
+    color: grey;
+}
+.actual_content>p{
+    font-size: 22px;
 }

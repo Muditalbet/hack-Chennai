@@ -22,11 +22,13 @@ function Management({match}) {
     }, [])
     var i = 1;
     return (
-        <div>
-            {disasterName}
+        <div className='management'>
+            <h1 className='management_head'>
+                Preventing Measures for {disasterName}
+            </h1>
             {points.map((point)=>{
                 return  <div key={i} className='actual_content'>
-                            {i}.  {point.content}
+                            <span>{i}.</span>  <p>{point.content}</p>
                             <p key={i++}></p>
                         </div>
             })}
