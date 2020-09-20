@@ -42,7 +42,7 @@ function Disasters() {
                         </Link>
                         <Link className='link' to={`/management/${_id}`}>
                         <div className='photu'>
-                            <img src={disasterImages[i]} />
+                            <img src={disasterImages[i]} alt='disaster image'/>
                             <p key={i++}></p>
                         </div>
                         </Link>

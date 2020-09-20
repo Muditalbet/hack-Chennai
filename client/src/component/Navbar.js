@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <div className='nav'>
             <Link to='/'>
-                <img src={Logo} />
+                <img src={Logo} alt='logo'/>
             </Link>
             <p className='slogan'>
                 Your Safety Is Everything To Us

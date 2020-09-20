@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className='footer'>
             <Link to='/'>
-                <img src={Logo} />
+                <img src={Logo} alt='logo'/>
             </Link>
         </div>
         

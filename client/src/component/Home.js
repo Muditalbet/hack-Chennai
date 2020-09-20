@@ -16,7 +16,7 @@ export default function Home() {
                     <p>A Website for Managing Disasters</p>
                 </div>
                 <div className='homeHeadingButtons'>
-                    <Link to='/disasters'>Get Started</Link>
+                    <Link to='/disasters'>Disasters</Link>
                 </div>
             </div>
             <h1 className='aboutHead'>ABOUT US</h1>
@@ -24,7 +24,7 @@ export default function Home() {
                 <span>
                     Disaster Prevention and Management (DPM) advances knowledge in the field of disaster risk reduction and management. It particularly welcomes contributions which emphasise multi-disciplinary and multi-actor perspectives on innovative topics related to disaster risk reduction and management which can be used during real-time disaster situations. With keeping in mind the steps for a particular disastorous situation mentioned we can overcome the losses to some extent. 
                 </span>
-                <img src={About} /> 
+                <img src={About}  alt='Main Image'/> 
             </div>
             <div className='mainContentHome'>
                 <h1 className='somedis'>Some of the Recent Major Disasters that Changed the World</h1>
@@ -38,12 +38,12 @@ export default function Home() {
                         </p>
                         </div>
                         <div className='photo'> 
-                            <img src={Haiti} ></img>
+                            <img src={Haiti} alt='Common Image 1'></img>
                         </div>
                     </div>
                     <div className='dis'>
                         <div className='photo'> 
-                            <img src={Sandy} ></img>
+                            <img src={Sandy} alt='Common Image 2'></img>
                         </div>
                         <div className='content'>
                         <h1>HURRICANE SANDY (2012)</h1>
@@ -58,12 +58,12 @@ export default function Home() {
                         </p>
                         </div>
                         <div className='photo'> 
-                            <img src={Haiyan} ></img>
+                            <img src={Haiyan} alt='Common Image 3'></img>
                         </div>
                     </div>
                     <div className='dis'>
                         <div className='photo'> 
-                            <img src={Tree} ></img>
+                            <img src={Tree} alt='Common Image 4'></img>
                         </div>
                         <div className='content'>
                         <h1>GLOBAL WILDFIRES (2019)</h1>
